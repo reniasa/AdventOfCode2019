@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6b872541-80ed-41e8-9e1b-a62513a7846c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>day_one.py</StartupFile>
+    <StartupFile>Day_Two\day_two.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -13,7 +13,7 @@
     <RootNamespace>AdventOfCode2019</RootNamespace>
     <TestFramework>unittest</TestFramework>
     <UnitTestPattern>*_tests.py</UnitTestPattern>
-    <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <UnitTestRootDirectory>./Tests</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,13 +24,25 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="day_one.py" />
-    <Compile Include="day_one_tests.py">
+    <Compile Include="Day_One\day_one.py" />
+    <Compile Include="Tests\day_one_tests.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Day_Two\day_two.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\day_two_tests.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="input.txt" />
+    <Content Include="Day_One\input.txt" />
+    <Content Include="Day_Two\input.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Day_One\" />
+    <Folder Include="Day_Two\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

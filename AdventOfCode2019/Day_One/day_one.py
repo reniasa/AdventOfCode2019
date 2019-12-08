@@ -21,7 +21,7 @@ class DayOne:
 
 
 day_one = DayOne()
-lines = day_one.read_file('input.txt')
+lines = day_one.read_file('Day_One/input.txt')
 day_one.calculateAllFuel(lines)
     
 
