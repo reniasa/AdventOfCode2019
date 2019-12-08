@@ -8,7 +8,12 @@ class DayOne:
     def calculateAllFuel(self, masses):
         allCalculatedFuel = 0
         for mass in masses:
-            allCalculatedFuel += self.__calculateFuel(mass)
+            remainder = self.__calculateFuel(mass)
+
+            while(remainder > 0):
+                allCalculatedFuel += remainder
+                remainder = self.__calculateFuel(remainder)
+
         return allCalculatedFuel
     
     def __calculateFuel(self, mass):
